@@ -14,23 +14,8 @@
 }
 
 \usepackage{calendar}
-
-\usepackage[english]{babel}
-% or whatever
-\usepackage{tikz}
-\usepackage{amsmath}
-\usepackage{amsfonts}
-%\usepackage{multimedia}
-\usepackage[latin1]{inputenc}
-%\usepackage{xmpmulti}
-\usepackage{times}
-%\usepackage{color}
-\usepackage[T1]{fontenc}
-% Or whatever. Note that the encoding and the font should match. If T1
-% does not look nice, try deleting the line with the fontenc.
-\usepackage{hyperref}
 \usepackage{datenumber}
-\usepackage{booktabs}
+
 
 
 \title[Syllabus] % (optional, use only with long paper titles)
@@ -192,17 +177,27 @@ This laboratory is a semester-long design and build activity centered around a c
 
 \begin{frame}{Project Description}
 Your employer has determined that a highly maneuverable robot with small footprint that can carry items from one location to another has a viable market for sale to hospitals and in other institutional settings. Your team is assigned to design and build a prototype device, which is a two-wheeled balancing robot that can cary cargo to a desired destination. This prototype should be self balancing, and able to move in a straight line. While many balancing robots use a complete inertial measurement unit (IMU) that incorporates a gyrometer, accelerometer, and compass, these sensors are quite expensive. Your boss has asked you to balance using the robot using {\em only} a gyrometer, which measures angular velocity. Other available sensors are wheel encoders, line sensors, and ultrasonic sensors. It should be able to receive commands wirelessly, which include: stop and hold position, move forward, and move to target. The robot should also be able to detect obstacles and stop if detected.  For the demonstrations, the cargo will be a 0.5 liter or 1 liter water bottle filled with water. 
-
-For convenience, some aspects of the design have been fixed: the motors, wheels, battery size, available sensors, and available embedded processors. However, you are free to choose all other elements of the design, including the construction of the robot frame (within the available Actobotics elements) placement of elements on the frame, and of course, all control systems, signal processing, and embedded system implementation.  
 \end{frame}
+
+\mode<article>{For convenience, some aspects of the design have been fixed: the motors, wheels, battery size, available sensors, and available embedded processors. However, you are free to choose all other elements of the design, including the construction of the robot frame (within the available Actobotics elements) placement of elements on the frame, and of course, all control systems, signal processing, and embedded system implementation.  
+}
+
+\mode<beamer>{\begin{frame}{Project Description}
+For convenience, some aspects of the design have been fixed: the motors, wheels, battery size, available sensors, and available embedded processors. However, you are free to choose all other elements of the design, including the construction of the robot frame (within the available Actobotics elements) placement of elements on the frame, and of course, all control systems, signal processing, and embedded system implementation.  
+\end{frame}}
 
 \begin{frame}{Group Work}
 You will be working in groups to complete the activities in this lab. This is done for several reasons. Researchers have shown that students that students working in small groups tend to learn more of what is taught and retain it longer than when the same content is presented in other instructional formats. In addition, the ability to work in a diverse group is an educational objective in itself, and one of the student outcomes that we are required to measure for accreditation of the electrical engineering degree is the ability to function on multidisciplinary teams. 
 
 We will model a multidisciplinary team by having some members concentrate on embedded systems, and some members concentrate on control systems. Even though you are all electrical engineers, you will need to learn how to cooperate and communicate with team members whose expertise is different from yours. 
-
-In order to assist in the formation and monitoring of the teams, we will use the CATME website. You will also be using CATME when you are in senior design. You will first fill out a team maker questionnaire with information about your background and skills.  We will then use CATME to form balanced teams. Before each demonstration, you will use CATME to fill out an evaluation of your team members. This will allow us to give feedback to you as to how you are working within the group. 
 \end{frame}
+
+\mode<article>{In order to assist in the formation and monitoring of the teams, we will use the CATME website. You will also be using CATME when you are in senior design. You will first fill out a team maker questionnaire with information about your background and skills.  We will then use CATME to form balanced teams. Before each demonstration, you will use CATME to fill out an evaluation of your team members. This will allow us to give feedback to you as to how you are working within the group. }
+
+
+\mode<beamer>{\begin{frame}{Group Work}
+In order to assist in the formation and monitoring of the teams, we will use the CATME website. You will also be using CATME when you are in senior design. You will first fill out a team maker questionnaire with information about your background and skills.  We will then use CATME to form balanced teams. Before each demonstration, you will use CATME to fill out an evaluation of your team members. This will allow us to give feedback to you as to how you are working within the group. 
+\end{frame}}
 
 
 \begin{frame}{Work Process}
@@ -258,7 +253,7 @@ On blackboard, you will find a short document from the Derek Bok Center for Teac
 %----------------------------------------------------------------------------------------
 
 \day{}{ % Friday
-\\
+%\\
 } 
 
 
@@ -266,7 +261,6 @@ On blackboard, you will find a short document from the Derek Bok Center for Teac
  
 \finishCalendar
 \end{calendar}
-
 \end{frame}
 
 \begin{frame}{Grading Scale}
@@ -353,7 +347,7 @@ The equipment that you will be provided must be returned in good working conditi
 \end{frame}
 
 \begin{frame}{Absenteeism}
-%\mode<article>{
+
 From the bulletin:
 \begin{quotation}
 Class attendance is required of all undergraduates unless the student is representing the School in an authorized activity, in which case the student will be allowed to make up any work missed. Students who miss academic work (including but not limited to exams, homework, labs) while participating in school sponsored activities must either be given the opportunity to make up this work in a reasonable period of time or be excused from such work. It is the responsibility of the student to initiate arrangements for such work. Proof of illness may be required before makeup of missed work is permitted. Excessive absence may result in a failing grade in the course. Determination of excessive absence is a departmental prerogative.
@@ -361,17 +355,17 @@ Class attendance is required of all undergraduates unless the student is represe
 The Office of the Dean of Students, if properly informed, will send a notice of excused absence {\em of three days or more} to faculty members for (1) an absence because of illness or injury for which documentation will be required; (2) an absence because of a death in the immediate family, i.e., a spouse, child, parent, grandparent, or sibling. For excused absences the student must be provided the opportunity to make up all missed work.
 
 \end{quotation}
-%}
+
 \end{frame}
 
 \begin{frame}{Academic Honesty}
-%\mode<article>{
+
 The Colorado School of Mines affirms the principle that all individuals associated with the Mines academic community have a responsibility for establishing, maintaining and fostering an understanding and appreciation for academic integrity. In broad terms, this implies protecting the environment of mutual trust within which scholarly exchange occurs, supporting the ability of the faculty to fairly and effectively evaluate every student's academic achievements, and giving credence to the university's educational mission, its scholarly objectives and the substance of the degrees it awards. The protection of academic integrity requires there to be clear and consistent standards, as well as confrontation and sanctions when individuals violate those standards. The Colorado School of Mines desires an environment free of any and all forms of academic misconduct and expects students to act with integrity at all times.  
 
 Academic misconduct is the intentional act of fraud, in which an individual seeks to claim credit for the work and efforts of another without authorization, or uses unauthorized materials or fabricated information in any academic exercise. Student Academic Misconduct arises when a student violates the principle of academic integrity. Such behavior erodes mutual trust, distorts the fair evaluation of academic achievements, violates the ethical code of behavior upon which education and scholarship rest, and undermines the credibility of the university. Because of the serious institutional and individual ramifications, student misconduct arising from violations of academic integrity is not tolerated at Mines. If a student is found to have engaged in such misconduct sanctions such as change of a grade, loss of institutional privileges, or academic suspension or dismissal may be imposed.
 
 The complete policy is online.
-%}  
+  
 \end{frame}
 
 \newpage
@@ -388,13 +382,6 @@ Fri\or Sat\or Sun\fi
 \setstartyear{2000}
 \setdate{2016}{1}{13}
 
-%% \begin{frame}
-% \begin{center}
-% {\small
-% \input{schedulecontent.tex}}
-% \end{center}
-%% \end{frame}
-
 \begin{center}
 \resizebox{6.5in}{!}{\begin{tikzpicture}[xscale=.9]
 % Row 1
@@ -406,9 +393,6 @@ Fri\or Sat\or Sun\fi
 % Row 4
 \draw[line width=30pt,color=blue!20!white] (16,-15.25) .. controls ++(-1,0) and ++(1,0) .. ++(-2,1.75) -- ++(-2,0) .. controls ++(-1,0) and ++(1,0) .. ++(-2,-1.75) -- ++(-2,0) .. controls ++(-1,0) and ++(1,0) .. ++(-2,1.75) -- ++(-2,0) .. controls ++(-1,0) and ++(1,0) .. ++(-2,-1.75) -- ++(-4,0); 
 
-%\draw[-{Computer Modern Rightarrow[length=20mm,width=30mm]}
-%\draw[-{Computer Modern Rightarrow[length=20mm,width=30mm]},line width=30pt,color=red!20!white] (0,-2) -- (15,-2) ..  controls ++(1,0) and ++(1,0) ..  (16,-6.5) --  (0,-6.5); 
-%\draw[-{Computer Modern Rightarrow[length=20mm,width=30mm]},line width=30pt,color=green!20!white] (0,-4) -- (2,-4) .. controls ++(1,0) and ++(-1,0) .. (4,-2.25) -- (6,-2.25) .. controls ++(1,0) and ++(-1,0) .. (8,-4) -- (10,-4) .. controls ++(1,0) and ++(-1,0) .. (12,-2.25) -- (15,-2.25) .. controls ++(1,0) and ++(1,0) .. (16,-6.75) .. controls ++(-1,0) and ++(1,0) .. (14,-8.5) -- (12,-8.5) .. controls ++(-1,0) and ++(1,0) .. (10,-6.75) -- (8,-6.75) .. controls ++(-1,0) and ++(1,0) .. (6,-8.5) -- (4,-8.5) .. controls ++(-1,0) and ++(1,0) .. (2,-6.75) -- (0,-6.75); 
 
 \draw[line width=30pt,color=green!20!white] (-2,-4) -- ++(4,0) .. controls ++(1,0) and ++(-1,0) .. ++(2,1.75) -- ++(2,0) .. controls ++(1,0) and ++(-1,0) .. ++(2,-1.75) -- ++(2,0) .. controls ++(1,0) and ++(-1,0) .. ++(2,1.75) -- ++(3,0) .. controls ++(1,0) and ++(1,0) ..  ++(1,-4.5); 
 \draw[line width=30pt,color=green!20!white] (16,-6.75) .. controls ++(-1,0) and ++(1,0) .. ++(-2,-1.75) -- ++(-2,0) .. controls ++(-1,0) and ++(1,0) .. ++(-2,1.75) -- ++(-2,0) .. controls ++(-1,0) and ++(1,0) .. ++(-2,-1.75) -- ++(-2,0) .. controls ++(-1,0) and ++(1,0) .. ++(-2,1.75) -- ++(-3,0) .. controls ++(-1,0) and ++(-1,0) ..  ++(-1,-4.5);
