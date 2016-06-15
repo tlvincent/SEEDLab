@@ -1,0 +1,7 @@
+    \begin{tikzpicture}[scale=3] \useasboundingbox (-.25,.11) rectangle (.25,.89); 
+    \draw[very thick] (0,.5) node[circle,draw,minimum width=.35in] (source) {};
+    \draw[very thick] (0,.5) node[right=0pt,fill=white,cylinder,draw,shape aspect=.4] {\rule{.25in}{0in}\rule{0in}{.1in}};
+
+    \draw[very thick] (0,.1) -- (source.-90);
+    \draw[very thick] (source.90) -- (0,.9); 
+    \end{tikzpicture}

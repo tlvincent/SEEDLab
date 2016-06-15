@@ -1,0 +1,10 @@
+Syllabus updates from Fall 2015:
+
+Performance Criteria are updated so that Demo 1 does not include balancing or wireless telemetry, while those are added to Demos 2 and 3. Scoring was changed to be a percentage of the top score, rather than a ranking. This makes it easier for a larger number of teams to compete for points.
+
+
+Changes to schedule: 
+Catme team builder to be completed before the second class session - Teams will be formed at the second class session, and team members will work on Intro to Arduino
+
+Motor control problem is now a combined team activity, and will be the focus of the preliminary demo. The preliminary demo time has been extended by one class period beyond last semester, and the first demo is more clearly focused on a 3 wheeled robot, with the second demo introducing balancing.
+

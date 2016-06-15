@@ -1,0 +1,141 @@
+
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head>
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+   <!--
+This HTML was auto-generated from MATLAB code.
+To make changes, update the MATLAB code and republish this document.
+      --><title>Setup_Parameters</title><meta name="generator" content="MATLAB 8.5"><link rel="schema.DC" href="http://purl.org/dc/elements/1.1/"><meta name="DC.date" content="2016-03-17"><meta name="DC.source" content="Setup_Parameters.m"><style type="text/css">
+html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,font,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td{margin:0;padding:0;border:0;outline:0;font-size:100%;vertical-align:baseline;background:transparent}body{line-height:1}ol,ul{list-style:none}blockquote,q{quotes:none}blockquote:before,blockquote:after,q:before,q:after{content:'';content:none}:focus{outine:0}ins{text-decoration:none}del{text-decoration:line-through}table{border-collapse:collapse;border-spacing:0}
+
+html { min-height:100%; margin-bottom:1px; }
+html body { height:100%; margin:0px; font-family:Arial, Helvetica, sans-serif; font-size:10px; color:#000; line-height:140%; background:#fff none; overflow-y:scroll; }
+html body td { vertical-align:top; text-align:left; }
+
+h1 { padding:0px; margin:0px 0px 25px; font-family:Arial, Helvetica, sans-serif; font-size:1.5em; color:#d55000; line-height:100%; font-weight:normal; }
+h2 { padding:0px; margin:0px 0px 8px; font-family:Arial, Helvetica, sans-serif; font-size:1.2em; color:#000; font-weight:bold; line-height:140%; border-bottom:1px solid #d6d4d4; display:block; }
+h3 { padding:0px; margin:0px 0px 5px; font-family:Arial, Helvetica, sans-serif; font-size:1.1em; color:#000; font-weight:bold; line-height:140%; }
+
+a { color:#005fce; text-decoration:none; }
+a:hover { color:#005fce; text-decoration:underline; }
+a:visited { color:#004aa0; text-decoration:none; }
+
+p { padding:0px; margin:0px 0px 20px; }
+img { padding:0px; margin:0px 0px 20px; border:none; }
+p img, pre img, tt img, li img, h1 img, h2 img { margin-bottom:0px; } 
+
+ul { padding:0px; margin:0px 0px 20px 23px; list-style:square; }
+ul li { padding:0px; margin:0px 0px 7px 0px; }
+ul li ul { padding:5px 0px 0px; margin:0px 0px 7px 23px; }
+ul li ol li { list-style:decimal; }
+ol { padding:0px; margin:0px 0px 20px 0px; list-style:decimal; }
+ol li { padding:0px; margin:0px 0px 7px 23px; list-style-type:decimal; }
+ol li ol { padding:5px 0px 0px; margin:0px 0px 7px 0px; }
+ol li ol li { list-style-type:lower-alpha; }
+ol li ul { padding-top:7px; }
+ol li ul li { list-style:square; }
+
+.content { font-size:1.2em; line-height:140%; padding: 20px; }
+
+pre, code { font-size:12px; }
+tt { font-size: 1.2em; }
+pre { margin:0px 0px 20px; }
+pre.codeinput { padding:10px; border:1px solid #d3d3d3; background:#f7f7f7; }
+pre.codeoutput { padding:10px 11px; margin:0px 0px 20px; color:#4c4c4c; }
+pre.error { color:red; }
+
+@media print { pre.codeinput, pre.codeoutput { word-wrap:break-word; width:100%; } }
+
+span.keyword { color:#0000FF }
+span.comment { color:#228B22 }
+span.string { color:#A020F0 }
+span.untermstring { color:#B20000 }
+span.syscmd { color:#B28C00 }
+
+.footer { width:auto; padding:10px 0px; margin:25px 0px 0px; border-top:1px dotted #878787; font-size:0.8em; line-height:140%; font-style:italic; color:#878787; text-align:left; float:none; }
+.footer p { margin:0px; }
+.footer a { color:#878787; }
+.footer a:hover { color:#878787; text-decoration:underline; }
+.footer a:visited { color:#878787; }
+
+table th { padding:7px 5px; text-align:left; vertical-align:middle; border: 1px solid #d6d4d4; font-weight:bold; }
+table td { padding:7px 5px; text-align:left; vertical-align:top; border:1px solid #d6d4d4; }
+
+
+
+
+
+  </style></head><body><div class="content"><pre class="codeinput">stall_torque = 170; <span class="comment">% oz-in</span>
+stall_current = 5; <span class="comment">% A</span>
+Max_voltage = 12; <span class="comment">% V</span>
+Max_RPM = 200; <span class="comment">% rpm</span>
+Max_RPM_Current = .3; <span class="comment">% A</span>
+Counts_per_Revolution = 3200; <span class="comment">% Encoder counts</span>
+Value_for_full_PWM = 255; <span class="comment">% digital output for 100% PWM</span>
+Wheel_radius = 3; <span class="comment">% in</span>
+l = .38; <span class="comment">% m</span>
+m1 = .6; <span class="comment">% kg</span>
+m2 = 1.9; <span class="comment">% kg</span>
+b_phi=0; <span class="comment">% rotational friction</span>
+b_x=0; <span class="comment">% translational friction</span>
+La=0; <span class="comment">% Motor inductance</span>
+Ts = .001; <span class="comment">% Sample time of controller</span>
+phi_0 = pi <span class="comment">% initial condition for angle of pendulum</span>
+
+<span class="comment">%</span>
+<span class="comment">% Conversions</span>
+<span class="comment">%</span>
+r=Wheel_radius/39.37; <span class="comment">% convert in to m</span>
+tau_max=stall_torque/141.612; <span class="comment">% convert oz-in to Nm</span>
+<span class="comment">%</span>
+<span class="comment">% Motor Constants</span>
+<span class="comment">%</span>
+Kt = tau_max/stall_current;    <span class="comment">% divide by stall current to get motor constant</span>
+Ra = Max_voltage/stall_current; <span class="comment">% motor resistance</span>
+Ke = (Max_voltage - Ra*Max_RPM_Current)/(Max_RPM*2*pi/60); <span class="comment">% back emf constant</span>
+<span class="comment">%</span>
+Kv = Max_voltage/Value_for_full_PWM; <span class="comment">% digial output to V conversion for motor</span>
+Ktheta = 2*pi/Counts_per_Revolution;
+</pre><pre class="codeoutput">
+phi_0 =
+
+    3.1416
+
+</pre><p class="footer"><br><a href="http://www.mathworks.com/products/matlab/">Published with MATLAB&reg; R2015a</a><br></p></div><!--
+##### SOURCE BEGIN #####
+stall_torque = 170; % oz-in
+stall_current = 5; % A
+Max_voltage = 12; % V
+Max_RPM = 200; % rpm
+Max_RPM_Current = .3; % A
+Counts_per_Revolution = 3200; % Encoder counts
+Value_for_full_PWM = 255; % digital output for 100% PWM
+Wheel_radius = 3; % in
+l = .38; % m
+m1 = .6; % kg
+m2 = 1.9; % kg
+b_phi=0; % rotational friction
+b_x=0; % translational friction
+La=0; % Motor inductance
+Ts = .001; % Sample time of controller
+phi_0 = pi % initial condition for angle of pendulum
+
+%
+% Conversions
+%
+r=Wheel_radius/39.37; % convert in to m
+tau_max=stall_torque/141.612; % convert oz-in to Nm 
+%
+% Motor Constants
+%
+Kt = tau_max/stall_current;    % divide by stall current to get motor constant
+Ra = Max_voltage/stall_current; % motor resistance
+Ke = (Max_voltage - Ra*Max_RPM_Current)/(Max_RPM*2*pi/60); % back emf constant
+%
+Kv = Max_voltage/Value_for_full_PWM; % digial output to V conversion for motor
+Ktheta = 2*pi/Counts_per_Revolution;
+ 
+
+##### SOURCE END #####
+--></body></html>
